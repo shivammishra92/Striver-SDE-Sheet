@@ -27,7 +27,7 @@ public:
      bool value = (p->val == q->val);
      if(left and right and value)
      return true;
-
+     else
      return false;
 
     }
