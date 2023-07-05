@@ -1,0 +1,20 @@
+
+
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        
+        if(root == NULL)
+        return root;
+        
+        //right me jao
+        if(root->val < p->val and root->val < q->val)
+        return lowestCommonAncestor(root->right,p,q);
+        //left me jao
+        else if(root->val > p->val and root->val > q->val)
+        return lowestCommonAncestor(root->left,p,q);
+        // nahi to yahi tumhara LCA hai ji!
+        else
+        return root;
+    }
+};
