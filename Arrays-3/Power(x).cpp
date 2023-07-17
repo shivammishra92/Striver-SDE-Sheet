@@ -1,4 +1,5 @@
 class Solution {
+    //using fast exponentiation
     public double myPow(double x, int n) {
         long nn = n;
         if(nn<0)
