@@ -1,9 +1,9 @@
-
+//https://practice.geeksforgeeks.org/problems/merge-k-sorted-arrays/1
 typedef pair<int,pair<int,int>>triplet;
     vector<int> mergeKArrays(vector<vector<int>> arr, int K)
     {
         int size = K;
-        
+
         priority_queue<triplet,vector<triplet>,greater<triplet>>pq;
         for(int i=0;i<size;i++){
             pq.push({arr[i][0],{i,0}});
