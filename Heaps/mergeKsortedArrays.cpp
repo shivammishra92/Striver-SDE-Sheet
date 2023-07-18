@@ -2,10 +2,13 @@
 typedef pair<int,pair<int,int>>triplet;
     vector<int> mergeKArrays(vector<vector<int>> arr, int K)
     {
+        int size = K;
+        
         priority_queue<triplet,vector<triplet>,greater<triplet>>pq;
-        for(int i=0;i<K;i++){
+        for(int i=0;i<size;i++){
             pq.push({arr[i][0],{i,0}});
         }
+
         vector<int>res;
         while(!pq.empty()){
             triplet curr=pq.top();
@@ -13,7 +16,8 @@ typedef pair<int,pair<int,int>>triplet;
             res.push_back(curr.first);
             int ap=curr.second.first;
             int vp=curr.second.second;
-            if(vp+1<K){
+
+            if(vp+1 < size){
                 pq.push({arr[ap][vp+1],{ap,vp+1}});
             }
         }
