@@ -27,7 +27,7 @@ public:
 
         }
 
-        //push all the nodes into the ans vector vertical order wise
+        //take care here,sort the elements belonging to the same location before pushing it into the vector
         for(auto i:nodes){
             vector<int>ans;
             for(auto j:i.second){
