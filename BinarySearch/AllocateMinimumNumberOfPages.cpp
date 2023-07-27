@@ -1,3 +1,4 @@
+class Solution{
 public:
     //Function to find minimum number of pages.
     bool isPossible(int A[],int n,int m,int mid)
@@ -24,7 +25,7 @@ public:
     int findPages(int A[], int n, int m) 
     {
         if(m>n)return -1;
-        
+
         int s=0,e=0,ans=-1;
         for(int i=0;i<n;i++)
         {
@@ -46,3 +47,4 @@ public:
         }
         return ans;
     }
+};
