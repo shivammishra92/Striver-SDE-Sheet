@@ -1,6 +1,6 @@
 class Solution{
-void allTraversal(node * root, vector < int > & pre, vector < int > & in , vector < int > & post) {
-  stack < pair < node * , int >> st;
+void allTraversal(node * root, vector <int> &pre, vector <int> &in , vector <int> &post) {
+  stack <pair<node *,int>>st;
   st.push({root,1});
 
   if (root == NULL) return;
